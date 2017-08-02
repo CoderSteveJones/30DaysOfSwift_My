@@ -14,6 +14,7 @@
 		B55CFE8D1F31BDF700CC5357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55CFE8B1F31BDF700CC5357 /* LaunchScreen.storyboard */; };
 		B55CFE981F31BDF700CC5357 /* TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55CFE971F31BDF700CC5357 /* TodoListTests.swift */; };
 		B55CFEA31F31BDF800CC5357 /* TodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55CFEA21F31BDF800CC5357 /* TodoListUITests.swift */; };
+		B55CFEB11F31C03900CC5357 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55CFEB01F31C03900CC5357 /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B55CFE9E1F31BDF800CC5357 /* TodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55CFEA21F31BDF800CC5357 /* TodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListUITests.swift; sourceTree = "<group>"; };
 		B55CFEA41F31BDF800CC5357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55CFEB01F31C03900CC5357 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				B55CFE821F31BDF700CC5357 /* AppDelegate.swift */,
 				B55CFE841F31BDF700CC5357 /* ViewController.swift */,
+				B55CFEB01F31C03900CC5357 /* ListCell.swift */,
 				B55CFE861F31BDF700CC5357 /* Main.storyboard */,
 				B55CFE891F31BDF700CC5357 /* Assets.xcassets */,
 				B55CFE8B1F31BDF700CC5357 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55CFEB11F31C03900CC5357 /* ListCell.swift in Sources */,
 				B55CFE851F31BDF700CC5357 /* ViewController.swift in Sources */,
 				B55CFE831F31BDF700CC5357 /* AppDelegate.swift in Sources */,
 			);
@@ -505,6 +509,7 @@
 				B55CFEA91F31BDF800CC5357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B55CFEAA1F31BDF800CC5357 /* Build configuration list for PBXNativeTarget "TodoListTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				B55CFEAC1F31BDF800CC5357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B55CFEAD1F31BDF800CC5357 /* Build configuration list for PBXNativeTarget "TodoListUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				B55CFEAF1F31BDF800CC5357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
