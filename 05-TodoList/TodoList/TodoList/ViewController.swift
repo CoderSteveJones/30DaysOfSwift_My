@@ -12,13 +12,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     @IBOutlet weak var tableView: UITableView!
-    
-   
-    
+    var todos = [Todo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        for i in 0..<10 {
+            
+        }
     }
 
     // MARK: UITableViewDelegate - UITableViewDataSource
@@ -32,12 +33,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let todo = todos[indexPath.row]
+        performSegue(withIdentifier: "showDetail", sender: todo)
+    }
+    
     @IBAction func editClick(_ sender: UIBarButtonItem) {
     }
     
     @IBAction func addClick(_ sender: UIBarButtonItem) {
+        
+        performSegue(withIdentifier: "addTodo", sender: nil)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let iden = segue.identifier {
+            
+            switch iden {
+            case "showDetail":
+                let vc = segue.destination as! TodoController
+                let todo = sender as! Todo
+                vc.todo = todo
+                navigationController?.pushViewController(vc, animated: true)
+            case "addTodo":
+                let vc = segue.destination as! TodoController
+                navigationController?.pushViewController(vc, animated: true)
+            default: break
+                
+            }
 
+        }
+    }
+    
 }
 

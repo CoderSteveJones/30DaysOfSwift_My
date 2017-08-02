@@ -82,6 +82,7 @@
                                             <outlet property="dateLabel" destination="iwo-Ka-dn6" id="RYI-Rj-gVY"/>
                                             <outlet property="imgView" destination="ISQ-Uf-dN5" id="gjU-g4-T73"/>
                                             <outlet property="thingLabel" destination="dXg-sr-xGw" id="KGl-S6-1ma"/>
+                                            <segue destination="X5j-dA-zlZ" kind="show" identifier="showDetail" id="5iM-fD-yOe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -110,6 +111,7 @@
                             <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addClick:" destination="04A-ie-yFc" id="cvl-Bf-Fcu"/>
+                                <segue destination="X5j-dA-zlZ" kind="show" identifier="addTodo" id="UXQ-ul-H4q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -121,5 +123,26 @@
             </objects>
             <point key="canvasLocation" x="949.60000000000002" y="262.21889055472263"/>
         </scene>
+        <!--Todo Controller-->
+        <scene sceneID="TSE-RD-kzH">
+            <objects>
+                <viewController id="X5j-dA-zlZ" customClass="TodoController" customModule="TodoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EQc-3M-G8r"/>
+                        <viewControllerLayoutGuide type="bottom" id="04l-o8-6aj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fR8-tG-rCJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Jh-It-Vxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956" y="279"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UXQ-ul-H4q"/>
+    </inferredMetricsTieBreakers>
 </document>

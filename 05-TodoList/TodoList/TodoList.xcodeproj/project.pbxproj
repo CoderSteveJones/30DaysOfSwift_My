@@ -15,6 +15,8 @@
 		B55CFE981F31BDF700CC5357 /* TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55CFE971F31BDF700CC5357 /* TodoListTests.swift */; };
 		B55CFEA31F31BDF800CC5357 /* TodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55CFEA21F31BDF800CC5357 /* TodoListUITests.swift */; };
 		B55CFEB11F31C03900CC5357 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55CFEB01F31C03900CC5357 /* ListCell.swift */; };
+		B55CFEB31F31C6DC00CC5357 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55CFEB21F31C6DC00CC5357 /* Todo.swift */; };
+		B55CFEB51F31CF2200CC5357 /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55CFEB41F31CF2200CC5357 /* TodoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B55CFEA21F31BDF800CC5357 /* TodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListUITests.swift; sourceTree = "<group>"; };
 		B55CFEA41F31BDF800CC5357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55CFEB01F31C03900CC5357 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		B55CFEB21F31C6DC00CC5357 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		B55CFEB41F31CF2200CC5357 /* TodoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 			children = (
 				B55CFE821F31BDF700CC5357 /* AppDelegate.swift */,
 				B55CFE841F31BDF700CC5357 /* ViewController.swift */,
+				B55CFEB41F31CF2200CC5357 /* TodoController.swift */,
 				B55CFEB01F31C03900CC5357 /* ListCell.swift */,
+				B55CFEB21F31C6DC00CC5357 /* Todo.swift */,
 				B55CFE861F31BDF700CC5357 /* Main.storyboard */,
 				B55CFE891F31BDF700CC5357 /* Assets.xcassets */,
 				B55CFE8B1F31BDF700CC5357 /* LaunchScreen.storyboard */,
@@ -265,6 +271,8 @@
 				B55CFEB11F31C03900CC5357 /* ListCell.swift in Sources */,
 				B55CFE851F31BDF700CC5357 /* ViewController.swift in Sources */,
 				B55CFE831F31BDF700CC5357 /* AppDelegate.swift in Sources */,
+				B55CFEB31F31C6DC00CC5357 /* Todo.swift in Sources */,
+				B55CFEB51F31CF2200CC5357 /* TodoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
