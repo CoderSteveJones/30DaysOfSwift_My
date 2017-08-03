@@ -83,7 +83,6 @@
                                             <outlet property="dateLabel" destination="iwo-Ka-dn6" id="RYI-Rj-gVY"/>
                                             <outlet property="imgView" destination="ISQ-Uf-dN5" id="gjU-g4-T73"/>
                                             <outlet property="thingLabel" destination="dXg-sr-xGw" id="KGl-S6-1ma"/>
-                                            <segue destination="X5j-dA-zlZ" kind="show" identifier="showDetail" id="5iM-fD-yOe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -111,12 +110,13 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8hx-ay-OLY">
                             <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="X5j-dA-zlZ" kind="show" id="6d5-gG-FR6"/>
+                                <segue destination="X5j-dA-zlZ" kind="show" identifier="addTodo" id="6d5-gG-FR6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="IZ3-ru-PGO" id="hf6-KO-dgW"/>
+                        <segue destination="X5j-dA-zlZ" kind="show" identifier="showDetail" id="Et8-xM-6QY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dk1-cB-6GW" userLabel="First Responder" sceneMemberID="firstResponder"/>

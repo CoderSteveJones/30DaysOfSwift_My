@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
 
     
     @IBOutlet weak var tableView: UITableView!
     var todos = [Todo]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,25 +33,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.tableFooterView = UIView()
     }
-
-    // MARK: UITableViewDelegate - UITableViewDataSource
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todos.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as! ListCell
-        cell.todo = todos[indexPath.row]
-        return cell
-    }
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let todo = todos[indexPath.row]
-        performSegue(withIdentifier: "showDetail", sender: todo)
-    }
     
     @IBAction func editClick(_ sender: UIBarButtonItem) {
+        
+        tableView.setEditing(true, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,10 +46,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let vc = segue.destination as! TodoController
                 let todo = sender as! Todo
                 vc.todo = todo
-                navigationController?.pushViewController(vc, animated: true)
+                
+            }else if iden == "addTodo" {
+                
+                let vc = segue.destination as! TodoController
+                vc.doClosure = { (todo) in
+                    self.todos.append(todo)
+                    self.tableView.reloadData()
+                }
             }
         }
     }
     
 }
 
+// MARK: - UITableViewDataSource
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return todos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as! ListCell
+        cell.todo = todos[indexPath.row]
+        return cell
+    }
+
+    
+}
+
+// MARK: - UITableViewDelegate
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let todo = todos[indexPath.row]
+        performSegue(withIdentifier: "showDetail", sender: todo)
+    }
+    
+    
+    
+
+}
