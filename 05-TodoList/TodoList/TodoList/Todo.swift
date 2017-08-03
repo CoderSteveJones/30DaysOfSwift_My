@@ -8,16 +8,22 @@
 
 import UIKit
 
-enum TodoType {
+enum TodoType: Int {
     
-    case child
-    case phone
-    case shopping
-    case traveling
+    case child = 0
+    case phone = 1
+    case shopping = 2
+    case traveling = 3
 }
 
 class Todo: NSObject {
-    var todoType: TodoType?
-    var thing: String?
-    var date: String?
+    var todoType: TodoType
+    var title: String
+    var date: String
+    
+    init(todoType: TodoType,title: String, date: String) {
+        self.todoType = todoType
+        self.title = title
+        self.date = date
+    }
 }

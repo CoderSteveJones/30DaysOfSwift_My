@@ -12,12 +12,44 @@ class TodoController: UIViewController {
 
     
     var todo: Todo?
+    
+    @IBOutlet weak var childBtn: UIButton!
+    
+    @IBOutlet weak var phoneBtn: UIButton!
+    
+    @IBOutlet weak var shoppingBtn: UIButton!
+    
+    @IBOutlet weak var travelBtn: UIButton!
+    
+    @IBOutlet weak var titleTf: UITextField!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    
+    @IBAction func childBtnClick(_ sender: UIButton) {
+    }
+    
+    @IBAction func phoneBtnClick(_ sender: UIButton) {
+    }
+    
+    @IBAction func shoppingBtnClick(_ sender: UIButton) {
+    }
+    
+    @IBAction func traveBtnClick(_ sender: UIButton) {
+    }
+    
+    @IBAction func doBtnClick(_ sender: UIButton) {
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
