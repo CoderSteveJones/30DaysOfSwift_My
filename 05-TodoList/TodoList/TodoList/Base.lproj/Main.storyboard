@@ -101,12 +101,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Todo List" id="IEI-N2-GwV">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="Nqc-uO-E9b">
-                            <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="editClick:" destination="04A-ie-yFc" id="PPH-l9-WCw"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8hx-ay-OLY">
                             <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>

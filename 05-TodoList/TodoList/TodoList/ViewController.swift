@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         }
         
         tableView.tableFooterView = UIView()
+        navigationItem.leftBarButtonItem = editButtonItem
     }
     
     @IBAction func editClick(_ sender: UIBarButtonItem) {
@@ -84,7 +85,29 @@ extension ViewController: UITableViewDelegate {
         performSegue(withIdentifier: "showDetail", sender: todo)
     }
     
+    // Eidt mode
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: true)
+        tableView.setEditing(editing, animated: true)
+    }
     
+    // Delete the cell
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            todos.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
     
+    // Move the cell
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return self.isEditing
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let todo = todos.remove(at: sourceIndexPath.row)
+        todos.insert(todo, at: destinationIndexPath.row)
+    }
 
 }
